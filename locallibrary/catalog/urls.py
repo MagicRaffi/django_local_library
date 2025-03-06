@@ -9,3 +9,10 @@ urlpatterns = [
     path('author/<int:pk>', views.AuthorDetailView.as_view(), name='author-detail'),
     
 ]
+urlpatterns += [
+    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+]
+
+urlpatterns += [
+    path('allbooks/', views.LibrarianView.as_view(), name='all-borrowed'),
+]
